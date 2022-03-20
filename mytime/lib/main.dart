@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.indigo,
+        primarySwatch: Colors.deepPurple,
       ),
       home: const MyHomePage(title: 'MyTime'),
     );
@@ -48,16 +48,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -89,38 +79,46 @@ class _MyHomePageState extends State<MyHomePage> {
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
-            Text(
+          children: <Widget>[
+            const Text(
               "MY DASHBOARD",
               style: TextStyle(
                 fontSize: 40,
               ),
             ),
-            Text(
+            const Text(
               "\n You used your phone this long today : \n \n",
               style: TextStyle(
                 fontSize: 25,
               ),
             ),
-            Text(
+            const Text(
               "\n You used you phone this long yesterday: \n \n",
               style: TextStyle(
                 fontSize: 25,
               ),
             ),
-            Text(
-              "\n You use you phone for an average of this long everyday:\n \n",
+            const Text(
+              "\n You use you phone for an average of this long everyday:\n \n \n",
               style: TextStyle(
                 fontSize: 25,
               ),
             ),
+            TextButton(
+              style: TextButton.styleFrom(
+                backgroundColor: Colors.deepPurple,
+                primary: Colors.white,
+              ),
+              onPressed: () {},
+              child: const Text(
+                "Show Previous Data",
+                style: TextStyle(
+                  fontSize: 30,
+                ),
+              ),
+            )
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ),
     );
   }
