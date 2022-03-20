@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.amber,
+        primarySwatch: Colors.indigo,
       ),
       home: const MyHomePage(title: 'MyTime'),
     );
@@ -48,8 +48,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
   void _incrementCounter() {
     setState(() {
       // This call to setState tells the Flutter framework that something has
@@ -57,7 +55,6 @@ class _MyHomePageState extends State<MyHomePage> {
       // so that the display can reflect the updated values. If we changed
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
-      _counter++;
     });
   }
 
@@ -91,23 +88,31 @@ class _MyHomePageState extends State<MyHomePage> {
           // center the children vertically; the main axis here is the vertical
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
-          //mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const <Widget>[
+            Text(
+              "MY DASHBOARD",
+              style: TextStyle(
+                fontSize: 40,
+              ),
             ),
             Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+              "\n You used your phone this long today : \n \n",
+              style: TextStyle(
+                fontSize: 25,
+              ),
             ),
-            const Text(
-              "You used your phone this long today :",
+            Text(
+              "\n You used you phone this long yesterday: \n \n",
+              style: TextStyle(
+                fontSize: 25,
+              ),
             ),
-            const Text(
-              "You used you phone this long yesterday",
-            ),
-            const Text(
-              "You use you phone for an average of this long everyday:",
+            Text(
+              "\n You use you phone for an average of this long everyday:\n \n",
+              style: TextStyle(
+                fontSize: 25,
+              ),
             ),
           ],
         ),
